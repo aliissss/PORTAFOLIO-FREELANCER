@@ -1,0 +1,78 @@
+:root {
+    --primario: #ffc107;
+    --secundario: #0097a9;
+    --gris: #757575;
+    --blanco: #fffefe;
+    --grisclaro: #DFE9F3;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+    min-height: 100vh;
+}
+
+/* Personalización de Colores Bootstrap */
+.btn-primary {
+    background-color: var(--secundario);
+    border-color: var(--secundario);
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #007a8a;
+    border-color: #007a8a;
+}
+
+.btn-warning {
+    background-color: var(--primario);
+    border-color: var(--primario);
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: #212121;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+.icono-circulo {
+    height: 100px;
+    width: 100px;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #212121;
+}
+
+h3 {
+    color: var(--secundario);
+    font-weight: 700;
+}
+
+.form-control:focus {
+    border-color: var(--secundario);
+    box-shadow: 0 0 0 0.25rem rgba(0, 151, 169, 0.25);
+}
+
+.form-label {
+    letter-spacing: 1px;
+}
