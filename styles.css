@@ -1,0 +1,251 @@
+:root{
+    --negro:#212121;
+    --primario:#ffc107;
+    --secundario:#0097a9;
+    --gris:#757575;
+    --blanco:#fffefe; 
+    --grisclaro: #DFE9F3;
+    --fuente-principal:8rem;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px;
+    font-family: 'krub', sans-serif; 
+    /*background-color: blueviolet;*/
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%); /*degradado de color*/
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+    /*margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem 1rem 3rem;
+    margin-top: 3rem; /*espacio hacia abajo*/
+    font-size: 1rem;
+    text-decoration: none; /* quitar subrayando*/
+    text-transform: uppercase; /*mayusculas*/
+    font-weight: bold; /*negrita, tambien se puede con uhn 700*/
+    border-radius: .5rem; /*aristas redondeadas*/
+    width: 90%; /*aumenta resolucion cuando es mas peque;a*/
+    text-align: center;
+}
+
+.boton:hover{
+    cursor: pointer;
+}
+
+@media (min-width:768px) {
+    .boton{
+        width: auto;
+    }
+}
+
+.sombra{
+    /*codigo copiado*/
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48); 
+    background-color: var(--blanco);
+    padding: 2rem; /*ya no esta todo pegado*/
+    border-radius: 1rem; /*hacerlo redond*/
+
+}
+
+h1 {
+    font-size: 3.8rem;
+    /*font-family: 'krub', sans-serif;  
+    font-weight: normal;*/
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
+}
+.titulo span{
+    font-size: 2rem;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+
+.navegacion-principal{
+    /*padding: 1rem; /*para el espacio de las letras a la barra de navegacion, engorda de adentro hacia afuera*/
+    display: flex;
+    flex-direction: column; /* la barra de navegacion cambia si diminuye la pantalla*/
+    /*
+    /*background-color: var(--secundario);*/
+}
+
+@media (min-width:768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/*@media (min-width:1140px) {
+    
+}*/
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--blanco);
+    text-decoration: none; /*quita las lineas del enlace, line-through tacha enlaces*/
+    font-weight:700;
+    padding: 1rem;
+}
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    /*padding: 1rem;*/
+    color: var(--negro);
+}
+
+.hero{
+    background-image: url(hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /**/
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+
+.contenido-hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+.contenido-hero .ubicacion{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+@media (min-width:768px) {
+    .servicios{
+        display: grid; /*habilitar con grid*/
+        grid-template-columns: repeat(3,1fr); /*machote, plantilla de una regilla se repite 3 y 1 fraccion(dividir de manera equitativa)*/
+        column-gap: 1rem;
+    }
+}
+.servicio{
+    display: flex;
+    flex-direction: column; /*cambia direccion a las columnas*/
+    align-items: center; /*centra la informacion*/
+}
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%; /*circulo*/
+    display: flex; /*habilitar*/
+    justify-content: space-evenly;
+    align-items: center;
+}
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.footer{
+    text-align:center;
+}
+
+/*flebox ayuda a desarollar layouts:diseños
+trabaja de izq a derr o de arriba abajo
+row o column, los hijos de izq a dere (en este caso los enlaces)
+column, elemenots de arriba hacia abajo 
+body{
+    background-color: yellowgreen;
+    font-size: 3rem;
+}
+@media (min-width:480px) {
+    body {
+        background-color: blue;
+        font-size: 0.5rem;
+    }
+}
+@media (min-width:768px) {
+    body {
+        background-color: pink;
+    }
+}*/
+
+/*css grid: permite definir la ubicacion de los elementos de tu sitio @-webkit-keyframes
+flexbox, alinear o distribuir los elementos dentro de un contenedor llamado barra de .navegacion-principal
+css grid grid:arreglo bidimencional, filas y columnas, se utiliza cuando se quiere definir el die;o de tu sitio web ya se columnas o contenedores de elementos
+sevicios, clase generica
+servicio, clase derivar en 3, desarrolllo, aplicaciones y*/
